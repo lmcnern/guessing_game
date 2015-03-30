@@ -1,0 +1,36 @@
+<script>
+  (function (){
+    var name = prompt('Hello! What is your name?');
+    alert('Hi, ' + name + '!');
+    console.log(name);
+  })();
+  console.log(name);
+
+  (function (){
+    var daysNumber = 7;
+    var daysResponse = prompt('Tell me how many days of the week there are.');
+    answer = Number.parseInt(daysResponse);
+  while (true) {
+     if (daysNumber > answer) {
+        answer = Number.parseInt(prompt('That guess is too low. COME ON, SON!'));
+      } else if (daysNumber < answer) {
+        answer = Number.parseInt(prompt('Your guess is too high. The answer is smaller!'));
+      }
+       else if (daysNumber === answer) {
+        alert('You have learned a lot, good work!');
+        break;
+      }
+    }
+  })();
+
+  (function (){
+    var animals = prompt('What is your favorite kind of animal?');
+    alert('Cool! I like ' + animals + ' too!');
+    console.log(animals);
+  })();
+  console.log(animals);
+
+  alert('You really have life figured out! You have won the game. But you have also lost The Game.');
+
+
+</script>
