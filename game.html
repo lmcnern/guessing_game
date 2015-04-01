@@ -1,4 +1,6 @@
 <script>
+var myCount = new TheEnd();
+
   (function (){
     var name = prompt('Hello! What is your name?');
     alert('Hi, ' + name + '!');
@@ -13,8 +15,10 @@
   while (true) {
      if (daysNumber > answer) {
         answer = Number.parseInt(prompt('That guess is too low. COME ON, SON!'));
+       myCount.addCount();
       } else if (daysNumber < answer) {
         answer = Number.parseInt(prompt('Your guess is too high. The answer is smaller!'));
+        myCount.addCount();
       }
        else if (daysNumber === answer) {
         alert('You have learned a lot, good work!');
@@ -25,20 +29,35 @@
 
   (function (){
     var animals = prompt('What is your favorite kind of animal?');
+    myCount.addCount();
     alert('Cool! I like ' + animals + ' too!');
     console.log(animals);
+
+
   })();
 
   (function () {
     var hobby = prompt('Do you have an interesting hobby?');
+    myCount.addCount();
     alert('Wow, I am impressed by your hobby of ' + hobby);
     console.log(hobby);
   })();
 
 
-
-
   alert('You really have life figured out! You have won the game. But you have also lost The Game.');
+
+function TheEnd() {
+    this.count = 0;
+    this.addCount = function() {
+      this.count++;
+    }
+  }
+    console.dir(myCount);
+
+  alert('Wow! Your final score is ' + myCount.count + '!');
+
+
+
 
 
 </script>
