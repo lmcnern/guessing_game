@@ -1,11 +1,19 @@
+//#8BEA60
+
 var myCount = new TheEnd();
 
   (function (){
     var name = prompt('Hello! What is your name?');
-    alert('Hi, ' + name + '!');
-    console.log(name);
+
+  // var newEl = document.createElement('li');
+  var getTracked = document.getElementById('tracked');
+  //var newText = document.createTextNode('OK!');
+  var msg = '<li>' + name + '</li>';
+  getTracked.innerHTML = msg;
+  getTracked.appendChild(msg);
+
   })();
-  console.log(name);
+
 
   (function (){
     var daysNumber = 7;
@@ -24,15 +32,16 @@ var myCount = new TheEnd();
         break;
       }
     }
+
   })();
 
   (function (){
     var animals = prompt('What is your favorite kind of animal?');
     myCount.addCount();
-    alert('Cool! I like ' + animals + ' too!');
-    console.log(animals);
-
-
+      var getTracked = document.getElementById('tracked');
+      var msg = '<li>' + animals + '</li>';
+        getTracked.innerHTML = msg;
+        getTracked.appendChild(msg);
   })();
 
   (function () {
