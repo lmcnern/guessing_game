@@ -10,7 +10,6 @@ var myCount = new TheEnd();
   //var newText = document.createTextNode('OK!');
   var msg = '<li>' + name + '</li>';
   getTracked.innerHTML = msg;
-  getTracked.appendChild(msg);
 
   })();
 
@@ -28,7 +27,11 @@ var myCount = new TheEnd();
         myCount.addCount();
       }
        else if (daysNumber === answer) {
-        alert('You have learned a lot, good work!');
+        // var newEl = document.createElement('li');
+  var getTracked2 = document.getElementById('tracked2');
+  //var newText = document.createTextNode('OK!');
+  var msg = '<li>' + answer + '</li>';
+  getTracked2.innerHTML = msg;
         break;
       }
     }
@@ -38,21 +41,25 @@ var myCount = new TheEnd();
   (function (){
     var animals = prompt('What is your favorite kind of animal?');
     myCount.addCount();
-      var getTracked = document.getElementById('tracked');
-      var msg = '<li>' + animals + '</li>';
-        getTracked.innerHTML = msg;
-        getTracked.appendChild(msg);
+      // var newEl = document.createElement('li');
+    var getTracked3 = document.getElementById('tracked3');
+  //var newText = document.createTextNode('OK!');
+    var msg = '<li>' + animals + '</li>';
+    getTracked3.innerHTML = msg;
   })();
 
   (function () {
     var hobby = prompt('Do you have an interesting hobby?');
     myCount.addCount();
-    alert('Wow, I am impressed by your hobby of ' + hobby);
-    console.log(hobby);
+    // var newEl = document.createElement('li');
+    var getTracked4 = document.getElementById('tracked4');
+  //var newText = document.createTextNode('OK!');
+    var msg = '<li>' + hobby + '</li>';
+    getTracked4.innerHTML = msg;
   })();
 
 
-  alert('You really have life figured out! You have won the game. But you have also lost The Game.');
+//alert('You really have life figured out! You have won the game. But you have also lost The Game.');
 
 function TheEnd() {
     this.count = 0;
